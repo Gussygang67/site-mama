@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Лучшие чебуреки в Смоленске</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>ЧебуречнаяКрым</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Чебуреки и вино</h1>
+    <h3>как смысл жизни!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Наши чебуреки лучше в городе!</h2>
+      <span>Заглядывайте к нам и убедитесь сами!</span>
+    </div>
+    <div class="text">
+      <span>ПРИМЕР ОПИСАНИЯ.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2></h2>
+    <h4></h4>
+
+
+  </div>
+
+  <div id="zayava">
+    <center><h14>Оставить заявку на мероприятие</h14></center>
+    <form id="form_input">
+      <label for="name">Ваше имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Какое мероприятие вы хотите заказать? <span>*</span></label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Пример вкладки</span><br>
+      <span class="heading">ПРИМЕР ВОПРОСА?</span>
+      <p>ПРИМЕР ОПИСАНИЯ.</p>
+      <span class="heading">ПРИМЕР ВОПРОСА?</span>
+      <p>ПРИМЕР ОПИСАНИЯ.</p>
+      <span class="heading">ПРИМЕР ВОПРОСА?</span>
+      <p>ПРИМЕР ОПИСАНИЯ.</p>
+    </div>
+    <div>
+      <span class="title">Информация</span><br>
+      <span class="heading">ПРИМЕР ВОПРОСА?</span>
+      <p>ПРИМЕР ОПИСАНИЯ.</p>
+      <span class="heading">ПРИМЕР ВОПРОСА?</span>
+      <p>ПРИМЕР ОПИСАНИЯ.</p>
+      <span class="heading">ПРИМЕР ВОПРОСА?</span>
+      <p>ПРИМЕР ОПИСАНИЯ.</p>
+    </div>
+    <div>
+      <span class="title">Контакты</span><br>
+      <span class="heading">Наш номер телефона</span>
+      <p>ПРИМЕР ОПИСАНИЯ.</p>
+      <span class="heading">ПРИМЕР ВОПРОСА?</span>
+      <p>ПРИМЕР ОПИСАНИЯ.</p>
+      <span class="heading">ПРИМЕР ВОПРОСА?</span>
+      <p>ПРИМЕР ОПИСАНИЯ.</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 700);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
